@@ -23,13 +23,16 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
+    @Column(name = "employee_id_code", unique = true, length = 10)
+    private String employeeIdCode;
+
     @Column(unique = true, nullable = false, length = 100)
     private String username;
     
-    @Column(nullable = false)
+    @Column(nullable = false, length = 255)
     private String password;
     
-    @Column(name = "full_name")
+    @Column(name = "full_name", length = 255)
     private String fullName;
     
     @Column(nullable = false, columnDefinition = "user_role")
@@ -42,6 +45,12 @@ public class Employee {
     @Column(name = "accumulated_leave_days", nullable = false)
     private Integer accumulatedLeaveDays = 0;
     
+    @Column(length = 255)
+    private String position;
+
+    @Column(length = 255)
+    private String department;
+
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private OffsetDateTime createdAt;

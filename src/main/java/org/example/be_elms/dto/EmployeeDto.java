@@ -10,10 +10,13 @@ import org.example.be_elms.model.enums.UserRole;
 @AllArgsConstructor
 public class EmployeeDto {
     private Integer id;
+    private String employeeIdCode;
     private String username;
     private String fullName;
     private UserRole role;
     private Integer annualLeaveEntitlement;
     private Integer accumulatedLeaveDays;
+    private String position;
+    private String department;
 }
 

@@ -10,9 +10,12 @@ import org.example.be_elms.model.enums.UserRole;
 @AllArgsConstructor
 public class LoginResponse {
     private Integer id;
+    private String employeeIdCode;
     private String username;
     private String fullName;
     private UserRole role;
+    private String position;
+    private String department;
     private String message;
 }
 
